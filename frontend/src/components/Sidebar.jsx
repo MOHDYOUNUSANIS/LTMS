@@ -34,6 +34,10 @@ export default function Sidebar({ user, onLogout }) {
                 <NavLink to="/processes">
                     ⚗ <span>Process Library</span>
                 </NavLink>
+
+                <NavLink to="/production">
+                    ⚙ <span>Production Management</span>
+                </NavLink>
             </nav>
 
             <div className="sidebar-bottom">
