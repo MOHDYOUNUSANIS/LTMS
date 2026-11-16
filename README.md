@@ -1,96 +1,64 @@
-# LTMS — Leather Tanning Management System
+LTMS — Leather Tanning Management System
 
-Local-first starter for digitising tannery production records. Stack: React + Vite, Node.js + Express, MySQL 8.
+Bringing traditional leather tanning operations into the digital age.
 
-## Important production note
-The two uploaded paper sheets are treated as **reference documents**, not validated recipes. Do not use software-calculated quantities as chemical instructions until a qualified tannery chemist verifies every chemical identity, percentage basis, sequence, pH target, temperature, float, and timing. The starter intentionally does not auto-dose machinery.
+1. What is LTMS?
 
-## Requirements
-- macOS on Apple Silicon (M2)
-- Node.js 20+
-- MySQL 8.x (Homebrew or MySQL installer)
-- VS Code
+LTMS (Leather Tanning Management System) is a web-based application designed to digitise and simplify the day-to-day operations of a leather tanning factory.
 
-## 1. Create the database
-Open Terminal in this folder:
-```bash
-mysql -u root -p < database/schema.sql
-```
-Use the password configured for your local MySQL root account. If root has no password, omit `-p`.
+In many traditional tanneries, important production information, chemical usage, drum activities and batch records are maintained manually in registers and on paper. This can make it difficult to track production, find previous records and manage factory operations efficiently.
 
-## 2. Configure the backend
-```bash
-cd backend
-cp .env.example .env
-```
-Edit `.env` and set your MySQL password and a long random JWT_SECRET.
-```bash
-npm install
-npm run dev
-```
-API runs at http://localhost:5000. Health check: http://localhost:5000/api/health
+LTMS aims to replace this traditional record-keeping approach with a centralised digital system where factory information can be recorded, monitored and accessed more easily.
 
-## 3. Create the first supervisor
-In a second Terminal tab:
-```bash
-cd backend
-npm run create-supervisor
-```
-Follow the prompts. The password is stored as a bcrypt hash.
+2. Why was LTMS created?
 
-## 4. Start the frontend
-In another Terminal tab:
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Open the local URL printed by Vite (normally http://localhost:5173).
+The idea behind LTMS comes from a real-world leather factory environment.
 
-## Project structure
-```text
-LTMS/
-├── backend/
-│   ├── src/
-│   │   ├── config/db.js
-│   │   ├── middleware/auth.js
-│   │   ├── routes/auth.js
-│   │   ├── routes/dashboard.js
-│   │   ├── routes/companies.js
-│   │   ├── routes/chemicals.js
-│   │   └── server.js
-│   ├── scripts/create-supervisor.js
-│   ├── .env.example
-│   └── package.json
-├── database/schema.sql
-└── frontend/
-    ├── src/
-    │   ├── components/Sidebar.jsx
-    │   ├── pages/Login.jsx
-    │   ├── pages/Dashboard.jsx
-    │   ├── pages/Companies.jsx
-    │   ├── pages/Inventory.jsx
-    │   ├── api.js
-    │   ├── App.jsx
-    │   ├── main.jsx
-    │   └── styles.css
-    ├── index.html
-    └── package.json
-```
+Traditional tanning operations involve multiple stages, chemicals, drums, workers and production batches. Keeping track of all these activities manually can become complicated, particularly when managing multiple companies and production orders.
 
-## Included in this first milestone
-- Required supervisor login
-- Company creation/listing
-- Dashboard summary cards
-- Chemical inventory list and low-stock flag
-- Database foundation for drums, process templates, process steps, production batches, batch logs and stock movements
+LTMS was developed with the goal of making these operations more organised, transparent and easier to monitor.
 
-## Suggested next modules
-1. Drum register: drum code, capacity, location, material, status, maintenance history.
-2. Process library: species/product/thickness/colour, stages, chemical items, percentage basis, float %, target pH and time.
-3. Batch execution: select company → product/process template → drum → batch weight → calculated draft quantities → supervisor confirmation.
-4. Chemical stock: goods receipt, issue to batch, returns, adjustments, supplier and batch/lot tracking.
-5. Audit trail, reports, PDF process sheet and backups.
+3. How does LTMS help in the leather tanning industry?
 
-## Local security
-Keep `.env` private and never commit it. Create individual supervisor accounts; do not share root database credentials with the app. Back up MySQL regularly. This starter is not yet hardened for internet exposure or direct machine control.
+* Digital Production Records: Maintain production batch information digitally instead of depending entirely on paper registers.
+* Drum Management: Keep track of tanning drums, their capacities, availability and running status.
+* Chemical Inventory: Maintain chemical stock records, track incoming and outgoing quantities, and identify low-stock chemicals.
+* Production Monitoring: Record individual production stages, their starting and completion times, actual pH and temperature readings, and operator notes.
+* Process Library: Maintain organised records of tanning process templates, stages and associated chemicals.
+* Company Management: Manage multiple companies within one application, keeping their production and inventory information organised.
+* Production Tracking: Follow batches from creation to completion and check their current status.
+* Reports & Analytics: View production information through graphical charts, summaries and historical records instead of manually searching through registers.
+
+4. What makes LTMS useful?
+
+The main purpose of LTMS is not to change the chemistry or traditional methods of leather tanning. It is to improve how the information surrounding those processes is recorded and managed.
+
+For example, instead of searching through multiple registers to find information about a particular drum or production batch, a supervisor can access its digital record through LTMS.
+
+This can help with:
+
+* Reducing dependency on paper-based records.
+* Improving production record organisation.
+* Tracking chemical stock more conveniently.
+* Monitoring drum availability.
+* Maintaining a history of production activities.
+* Making factory information easier to access.
+* Supporting better planning and decision-making through reports.
+
+5. Technologies Used
+
+LTMS is developed using:
+
+* React.js — Frontend user interface.
+* Node.js — Backend runtime environment.
+* Express.js — Backend API development.
+* MySQL — Database management.
+* JWT — User authentication.
+
+6. The Vision Behind LTMS
+
+The vision is to gradually bring more digitalisation into traditional leather tanning operations.
+
+LTMS is a step towards making tannery management more organised, accessible and data-driven while respecting the practical requirements of the tanning industry.
+
+It is an ongoing student-developed project built around a real-world industrial problem, with the aim of making everyday factory operations easier to manage.
