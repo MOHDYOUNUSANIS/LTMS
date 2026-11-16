@@ -1,64 +1,154 @@
-LTMS — Leather Tanning Management System
+# LTMS – Leather Tanning Management System
 
-Bringing traditional leather tanning operations into the digital age.
+**A student-developed project to digitise traditional leather tanning factory operations.**
 
-1. What is LTMS?
+## About the Project
 
-LTMS (Leather Tanning Management System) is a web-based application designed to digitise and simplify the day-to-day operations of a leather tanning factory.
+LTMS (Leather Tanning Management System) is a web-based application developed to simplify and organise the day-to-day operations of a leather tanning factory.
 
-In many traditional tanneries, important production information, chemical usage, drum activities and batch records are maintained manually in registers and on paper. This can make it difficult to track production, find previous records and manage factory operations efficiently.
+In many traditional tanneries, production records, chemical inventory, drum activities and batch information are maintained manually using registers and paper documents.
 
-LTMS aims to replace this traditional record-keeping approach with a centralised digital system where factory information can be recorded, monitored and accessed more easily.
+LTMS aims to bring these activities into one digital platform, making factory information easier to record, manage, monitor and access.
 
-2. Why was LTMS created?
+The idea behind this project comes from a real-world leather factory environment. The goal is to use technology to solve practical problems in the tanning industry.
 
-The idea behind LTMS comes from a real-world leather factory environment.
+## Why LTMS?
 
-Traditional tanning operations involve multiple stages, chemicals, drums, workers and production batches. Keeping track of all these activities manually can become complicated, particularly when managing multiple companies and production orders.
+Leather tanning involves several production stages, chemicals, machinery, workers and batches. Managing all this information manually can become complicated.
 
-LTMS was developed with the goal of making these operations more organised, transparent and easier to monitor.
+LTMS aims to make this process more organised by providing a centralised system for managing factory operations.
 
-3. How does LTMS help in the leather tanning industry?
+## Key Features
 
-* Digital Production Records: Maintain production batch information digitally instead of depending entirely on paper registers.
-* Drum Management: Keep track of tanning drums, their capacities, availability and running status.
-* Chemical Inventory: Maintain chemical stock records, track incoming and outgoing quantities, and identify low-stock chemicals.
-* Production Monitoring: Record individual production stages, their starting and completion times, actual pH and temperature readings, and operator notes.
-* Process Library: Maintain organised records of tanning process templates, stages and associated chemicals.
-* Company Management: Manage multiple companies within one application, keeping their production and inventory information organised.
-* Production Tracking: Follow batches from creation to completion and check their current status.
-* Reports & Analytics: View production information through graphical charts, summaries and historical records instead of manually searching through registers.
+### 1. Dashboard
+- Overview of factory operations.
+- Important production statistics.
+- Quick access to different modules.
 
-4. What makes LTMS useful?
+### 2. Company Management
+- Manage multiple companies.
+- Maintain company information.
+- Access company-related factory records.
 
-The main purpose of LTMS is not to change the chemistry or traditional methods of leather tanning. It is to improve how the information surrounding those processes is recorded and managed.
+### 3. Drum Management
+- Maintain tanning drum records.
+- Track drum capacity and location.
+- Monitor drum availability and running status.
 
-For example, instead of searching through multiple registers to find information about a particular drum or production batch, a supervisor can access its digital record through LTMS.
+### 4. Chemical Inventory
+- Maintain chemical stock records.
+- Record stock receipts and issues.
+- Monitor available quantities.
+- Identify low-stock chemicals.
 
-This can help with:
+### 5. Process Library
+- Maintain leather processing templates.
+- Organise production stages.
+- Associate chemicals with process stages.
+- Store process-related information.
 
-* Reducing dependency on paper-based records.
-* Improving production record organisation.
-* Tracking chemical stock more conveniently.
-* Monitoring drum availability.
-* Maintaining a history of production activities.
-* Making factory information easier to access.
-* Supporting better planning and decision-making through reports.
+### 6. Production Management
+- Create and manage production batches.
+- Assign batches to companies and drums.
+- Track batch status.
+- Monitor production from start to completion.
 
-5. Technologies Used
+### 7. Production Monitoring
+- Record individual production stages.
+- Track stage starting and completion times.
+- Record actual pH and temperature readings.
+- Maintain operator notes and production history.
 
-LTMS is developed using:
+### 8. Reports & Analytics
+- Production summary.
+- Batch status distribution.
+- Monthly production trends.
+- Company-wise production.
+- Drum utilisation.
+- Chemical consumption.
+- Production batch history.
 
-* React.js — Frontend user interface.
-* Node.js — Backend runtime environment.
-* Express.js — Backend API development.
-* MySQL — Database management.
-* JWT — User authentication.
+Graphical reports help make factory information easier to understand.
 
-6. The Vision Behind LTMS
+## How LTMS Helps the Leather Tanning Industry
 
-The vision is to gradually bring more digitalisation into traditional leather tanning operations.
+LTMS is designed to support everyday tannery operations by:
 
-LTMS is a step towards making tannery management more organised, accessible and data-driven while respecting the practical requirements of the tanning industry.
+- Reducing dependency on paper-based records.
+- Making production information easier to access.
+- Improving chemical stock management.
+- Helping supervisors monitor tanning drums.
+- Maintaining records of production stages.
+- Making batch history easier to track.
+- Providing useful production summaries and graphical reports.
 
-It is an ongoing student-developed project built around a real-world industrial problem, with the aim of making everyday factory operations easier to manage.
+The objective is to improve information management without changing the actual chemistry or technical requirements of leather tanning.
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| React.js | Frontend development |
+| Node.js | Backend runtime |
+| Express.js | Backend API |
+| MySQL | Database |
+| JWT | Authentication |
+| Recharts | Graphical reports |
+| CSS | User interface styling |
+
+## Project Structure
+
+```text
+LTMS/
+│
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── middleware/
+│   │   ├── routes/
+│   │   └── server.js
+│   ├── scripts/
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── api.js
+│   │   └── styles.css
+│   └── package.json
+│
+├── database/
+│   └── schema.sql
+│
+├── README.md
+└── .gitignore
+```
+
+## Important Production Note
+
+LTMS is a production-record management application, not an automated tanning control system.
+
+Actual chemical recipes, dosage calculations, process sequences and operating conditions must be verified by a qualified tannery chemist before operational use.
+
+The application does not independently determine or authorise chemical dosing.
+
+## Future Improvements
+
+Some ideas for future development include:
+
+- Advanced production analytics.
+- PDF and Excel report generation.
+- QR-based drum identification.
+- Temperature sensor integration.
+- More detailed production tracking.
+- Cloud deployment.
+- Additional user roles and permissions.
+
+These are planned improvements and may not be part of the current implementation.
+
+## Project Purpose
+
+LTMS is an ongoing Computer Science student project developed around a real-world industrial problem.
+
+It represents an effort to bring digitalisation into traditional leather tanning operations and explore how software development can help improve everyday factory management.
